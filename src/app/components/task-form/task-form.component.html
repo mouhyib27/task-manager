@@ -1,0 +1,21 @@
+<form [formGroup]="form" *ngIf="form !== undefined" class="task-form" (ngSubmit)="handleSubmit()">
+<div fxLayout="row" fxLayoutAlign="space-between">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput formControlName="title" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select formControlName="category" (valueChange)="onChange($event)">
+      <mat-option *ngFor="let cat of categories" [value]="cat.value" >
+        {{cat.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+</div>
+  <button mat-raised-button color="accent">Submit</button>
+</form>

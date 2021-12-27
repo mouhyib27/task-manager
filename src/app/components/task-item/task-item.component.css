@@ -1,0 +1,33 @@
+.task-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-title {
+  color: #514646;
+  font-weight: bold;
+}
+
+.task-description {
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+  color: #1473E6;
+  font-weight: bold;
+}
+
+.divider {
+  /*margin-left: 10px;*/
+  /*margin-right: 10px;*/
+  opacity: 30%;
+}
+
+.text-primary {
+  color: green;
+}
+
+.task-item {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100%;
+}

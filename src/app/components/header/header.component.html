@@ -1,0 +1,7 @@
+<mat-card-title [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+  <h1>Task Manager</h1>
+  <app-button color="{{show? 'warn': 'primary'}}" text="{{show? 'Close': 'Add'}}" (btnClick)="toggleShow()"></app-button>
+</mat-card-title>
+<mat-card-content>
+  <app-task-form *ngIf="show"></app-task-form>
+</mat-card-content>

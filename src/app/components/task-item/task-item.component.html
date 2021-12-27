@@ -1,0 +1,16 @@
+<div class="task" *ngIf="task != null">
+  <div class="task-item" [ngStyle]="{'background-color': setBackgroundColor(), 'border': 'solid 2px '+ setColor()}">
+    <div class="task-top">
+      <h3 class="task-title">{{task.title}}</h3>
+      <h5 [ngStyle]="{'color': setColor(), 'font-weight': 'bold'}">{{task.category}}</h5>
+    </div>
+    <p class="task-description">
+      {{task.description}}
+    </p>
+    <hr class="divider">
+    <div [ngStyle]="{'display': 'flex', 'justify-content': 'space-between'}">
+      <h5>{{task.date}}</h5>
+      <button mat-raised-button (click)="completeTask(task)" color="warn">Mark as complete <mat-icon>check</mat-icon></button>
+    </div>
+  </div>
+</div>

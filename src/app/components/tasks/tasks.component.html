@@ -1,0 +1,9 @@
+<div *ngIf="tasks !== null">
+<!--  <h4>{{tasks?.length}}</h4>-->
+  <div *ngFor="let task of tasks">
+    <app-task-item [task]="task"></app-task-item>
+  </div>
+</div>
+<div *ngIf="tasks?.length == 0">
+  <h4 [ngStyle]="{'text-align': 'center'}">Aucune donnée disponible!</h4>
+</div>
